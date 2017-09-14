@@ -1,13 +1,14 @@
-#引用
+# 引用
+
 http://wiki.ubuntu.com.cn/%E8%B7%9F%E6%88%91%E4%B8%80%E8%B5%B7%E5%86%99Makefile:MakeFile%E4%BB%8B%E7%BB%8D
 
 # gmake 与 make
 gmake 是GNU make的缩写，在大多数的linux系统中，make就是GNU Make，对于一些unix的系统，make指向系统自带的make，例如：BSD make.
 
-#makefile介绍
+# makefile介绍
 make命令执行时，需要一个makefile文件来告诉他如何编译和链接程序。
 
-#makefile规则
+# makefile规则
 makefile的编写规则如下：
 target ... : prerequisites ...
 	command
@@ -18,7 +19,7 @@ prerequisties是生成target所需要的文件。
 command是make需要执行的命令（任意的shell命令），command之前必须有个TAB建。
 这是一个依赖关系的描述，生成target文件依赖于prerequisties的这些文件，如果依赖文件中的任何文件都比target要新，那么就会运行command重新生成target。
 
-#makefile示例
+# makefile示例
 ```
 shap : combinator.o circle.o rectangle.o
 	gcc -o shap combinator.o circle.o rectangle.o
@@ -34,7 +35,7 @@ clean :
 	del shap combinator.o circle.o rectangle.o
 ```
 
-#make中使用变量
+# make中使用变量
 从上面的示例可以看到，很多重复的地方，可以使用变量来替代：
 ```
 objects = combinator.o circle.o rectangle.o
@@ -52,7 +53,7 @@ clean :
 	del shap $(objects)
 ```
 
-#make中的隐晦规则和伪目标
+# make中的隐晦规则和伪目标
 GNU的make相当强大，他可以自动推导出文件以及文件依赖关系后面的命令，对于每一个[.o]文件，他会自动把[.c]文件加到依赖关系中，甚至后面都有 gcc -c [.c]这样的命令，make一会自动推导(nmake中，只能推导依赖关系，好像没法推导命令)。
 ```
 objects = combinator.o circle.o rectangle.o
@@ -68,7 +69,7 @@ clean :
 ```
 这里的.PHONY表示clean是一个伪目标。这里在del前加-，意味着也许某些文件会出问题，但不要管，继续做后面的事情
 
-#makefile内容
+# makefile内容
 makefile文件中有五个东西：显示规则，隐示规则，变量定义，文件指示和注释
 显示规则：显示书写出来，如何生成目标文件，依赖文件和生成文件的命令
 隐示规则：是由make命令推导出来，这样方便写出简洁的makefile
@@ -79,7 +80,7 @@ makefile文件中有五个东西：显示规则，隐示规则，变量定义，
 	* 定义一个多行的命令
 注释：用#来写注释
 
-#make的工作方式
+# make的工作方式
 - make命令会寻找当前目录下名为：GNUmakefile, makefile, Makefile的文件
 - 读入所有的makefile
 - 读入被include的makefile
