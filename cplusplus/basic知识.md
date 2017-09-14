@@ -20,6 +20,7 @@
 - 对于*.c和*.cpp文件，gcc分别当作c和cpp文件编译
 - 对于*.c和*.cpp文件，g++都当作cpp文件编译
 - 使用g++编译文件时，g++会自动链接标准库STL，而gcc不会
+- gcc在编译c文件的时候，可以使用的预定义宏是比较少的
 - gcc在编译cpp文件时/g++在编译c和cpp文件时，会加入一些额外的宏：这些宏如下：
     - #define __GXX_WEAK__ 1
     - #define __cplusplus 1
