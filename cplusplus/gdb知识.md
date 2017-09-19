@@ -3,59 +3,34 @@ http://www.cnblogs.com/zzx1045917067/archive/2012/12/26/2834310.html
 
 # 基本命令
 在使用gdb命令之前，编译程序shap.exe时需要加入-g选项
-* 启动命令
-进入gdb命令
-```
-gdb shap.exe
-```
-* 查看帮助文档
-查看list命令
-```
-help list
-```
-* 查看源代码
-l（list）命令可以查看源代码。
-查看当前文件或指定文件第五行前后的代码。
-```
-l 5
-l combinator.c 5
-l circle.c 5
-l show_circle
-```
-* 下断点
-在当前文件或指定文件位置设置断点。
-```
-b 5
-b combinator.c:8
-```
-* 查看断点
-```
-info b
-```
-* 启动shap.exe
-```
-r
-```
-* 查看变量
-```
-p i
-```
-* 观察变量
-```
-watch i
-```
-* 单步运行
-```
-n
-```
-* 继续运行
-```
-c
-```
-* 退出gdb
-```
-q
-```
+命令|描述
+--------|--------
+gdb shap.exe | 启动命令
+help list | 查看list命令
+list(l) 5， l circle.c 5，l show_circle | 查看当前文件或指定文件第五行前后的代码
+break(b) 5，b combinator.c:8 | 在当前文件或指定文件位置设置断点
+info b | 查看断点
+run(r) | 启动shap.exe
+print(p) i | 查看变量
+diplay exp | 显示表示的值，每当程序运行到断点处，就会显示表达式的值
+info display | 显示当前要显示的表达式的情况
+delete display No. | 删除要显示的表达式
+disable/enable display No. | 使需要显示的表达式失效/生效
+undisplay display No. | 用于结束表达式值的显示
+watch i | 观察变量
+next(n) | 非进入式单步运行
+continue(c) | 继续运行
+quit(q) | 退出gdb
+step(s) | 进入式（会进入当前调用的子函数中）单步执行，但此函数编译时必须有debug信息
+finish | 一直运行到函数返回，并打印函数返回时的堆栈地址和返回值及参数值等信息
+until 3 | 运行到函数某一行
+return 5 | 改变程序流程，直接结束当前函数，并将指定值返回
+call func | 在当前位置执行指定的函数
+set args arg1 arg2 | 设置运行参数
+show args | 显示运行参数
+set width 70 | 设置gdb的行宽
+cd ../ | 切换工作目录
+
 # 断点
 
 ## 设置/取消断点
