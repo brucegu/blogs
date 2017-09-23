@@ -1,3 +1,1 @@
-# c/c++ knowledges
-# linux knowledges
-# c# knowledges
+Generate blogs with hexo
