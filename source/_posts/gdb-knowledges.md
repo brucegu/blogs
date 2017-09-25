@@ -2,6 +2,8 @@
 title: GDB知识
 date: 2017-09-23 08:15:02
 tags: 
+    - gdb
+categories:
     - C/C++
 ---
 gdb的基础知识

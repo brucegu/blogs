@@ -2,6 +2,8 @@
 title: C/C++ 基础知识
 date: 2017-09-23 08:12:02
 tags: 
+    - GCC
+categories:
     - C/C++
 ---
 什么是GCC, gcc, g++，他们之间的关系是什么，gcc和g++的区别是什么

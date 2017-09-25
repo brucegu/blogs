@@ -1,6 +1,8 @@
 ---
 title: 冒泡排序
-tags: C/C++
+tags: bubble
+categories:
+    - algorithm
 date: 2017-09-25 14:17:49
 ---
 冒泡排序是交换排序的一种，是排序算法中最简单，效率最差的一种。

@@ -1,6 +1,8 @@
 ---
 title: 常用数列概念
-tags: 数列
+tags: sequence
+categories:
+    - math
 date: 2017-09-25 16:44:48
 ---
 

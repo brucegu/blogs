@@ -2,6 +2,8 @@
 title: MAKEFILE知识
 date: 2017-09-23 09:00:00
 tags: 
+	- makefile
+categories:
 	- C/C++
 ---
 makefile 基础知识
