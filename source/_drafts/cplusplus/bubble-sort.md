@@ -8,6 +8,13 @@ tags: C/C++
 
 ## 算法实现
 ```
+void bubble_demo()
+{
+    int data[] = { 10, 20, 11, 30, 9, 5, 12, 29 };
+    bubble( data, lengthof(data, int) );
+    print_int_array( data, lengthof(data, int) );
+}
+
 void bubble( int *data, int length )
 {
     for (int i = 0; i < length-1; i++)
@@ -16,6 +23,22 @@ void bubble( int *data, int length )
         {
             if (data[j] > data[j+1]) swap( data, j, j+1 );
         }
+    }
+}
+
+void swap( int *data, int i, int j )
+{
+    int tmp = data[i];
+    data[i] = data[j];
+    data[j] = tmp;
+}
+
+void print_int_array( int *data, int length )
+{
+    printf( "data:\n" );
+    for (int i=0; i<length; i++)
+    {
+        printf( " %d", data[i] );
     }
 }
 ```
