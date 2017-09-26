@@ -48,3 +48,25 @@ void print_int_array( int *data, int length )
     }
 }
 ```
+## 算法改进
+如果从某一项开始，不再与其他项进行交换，在此之后的数据项就是已经排过序的，那么从该项之后的比较就不再需要了。
+```
+void bubble_stop_when_noexchange( int *data, int length )
+{
+    int i = length - 1;
+    while(i > 0)
+    {
+        int pos = 0;
+        for (int j = 0; j < i; j++)
+        {
+            if (data[j] > data[j+1])
+            {
+                pos = j;
+                swap( data, j, j+1 );
+            }
+        }
+        i = pos;
+    }
+}
+```
+
