@@ -18,26 +18,26 @@ date: 2017-09-25 16:44:48
 ## 等比数列求和
 一个数列，如果任意一项与前一项的比值是一个常数，用q来代表这个常数，且任一项不为0，即A(n)/A(n-1)=q（n为自然数），这个数列叫等比数列，其中常数q叫公比。
 ### 通项公式：
-a~n~ = a~1~ * q^(n-1)^;
+a<sub>n</sub> = a<sub>1</sub> * q<sup>(n-1)</sup>;
 ### 求和公式：
-S~n~ = a~1~ * n (q=1)
-S~n~ = a~1~ * (q^n^-1)/(q-1) (q != 1)
+S<sub>n</sub> = a<sub>1</sub> * n (q=1)
+S<sub>n</sub> = a<sub>1</sub> * (q<sup>n</sup>-1)/(q-1) (q != 1)
 ### 求和推导：
-（1）S~n~=a~1~+a~2~+a~3~+...+a~n~ (公比为q)
-（2）qS~n~=a~1~q + a~2~q + a~3~q +...+ a~n~q = a~2~+ a~3~+ a~4~+...+ a~n~+ a~(n+1)~
-（3）S~n~-qS~n~=(1-q)S~n~=a~1~-a~(n+1)~
-（4）a~(n+1)~=a~1~q^n^
-（5）S~n~=a~1~(1-q^n^)/(1-q)（q≠1)
+（1）S<sub>n</sub>=a<sub>1</sub>+a<sub>2</sub>+a<sub>3</sub>+...+a<sub>n</sub> (公比为q)
+（2）qS<sub>n</sub>=a<sub>1</sub>q + a<sub>2</sub>q + a<sub>3</sub>q +...+ a<sub>n</sub>q = a<sub>2</sub>+ a<sub>3</sub>+ a<sub>4</sub>+...+ a<sub>n</sub>+ a<sub>(n+1)</sub>
+（3）S<sub>n</sub>-qS<sub>n</sub>=(1-q)S<sub>n</sub>=a<sub>1</sub>-a<sub>(n+1)</sub>
+（4）a<sub>(n+1)</sub>=a<sub>1</sub>q<sup>n</sup>
+（5）S<sub>n</sub>=a<sub>1</sub>(1-q<sup>n</sup>)/(1-q)（q≠1)
 
 ## 等差数列求和
 一个数列，从第二项开始，每一项与前一项的差等于同一个常数，那么这个数列叫等差数列。
 ### 通项公式：
-a~n~ = a1 + (n-1)d;
+a<sub>n</sub> = a<sub>1</sub> + (n-1)d;
 ### 求和公式：
-S~n~ = (a~1~ + a~n~) * n / 2;
+S<sub>n</sub> = (a<sub>1</sub> + a<sub>n</sub>) * n / 2;
 ### 推导过程：
-S~n~ = a~1~ + ... + a~n~
-S~n~ = n * a~1~ + ( 0 + 1 + 2 ... + (n-1) ) * d
-S~n~ = n * a~1~ + n * (n-1) * d / 2
-S~n~ = (n * a~1~ + n * a~1~ + n * (n-1) * d) /2
-S~n~ = n * (a~1~ + a~n~) / 2
+S<sub>n</sub> = a<sub>1</sub> + ... + a<sub>n</sub>
+S<sub>n</sub> = n * a<sub>1</sub> + ( 0 + 1 + 2 ... + (n-1) ) * d
+S<sub>n</sub> = n * a<sub>1</sub> + n * (n-1) * d / 2
+S<sub>n</sub> = (n * a<sub>1</sub> + n * a<sub>1</sub> + n * (n-1) * d) /2
+S<sub>n</sub> = n * (a<sub>1</sub> + a<sub>n</sub>) / 2
