@@ -49,7 +49,7 @@ void print_int_array( int *data, int length )
 }
 ```
 ## 算法改进
-如果从某一项开始，不再与其他项进行交换，在此之后的数据项就是已经排过序的，那么从该项之后的比较就不再需要了。
+* 如果从某一项开始，不再与其他项进行交换，在此之后的数据项就是已经排过序的，那么从该项之后的比较就不再需要了。
 ```
 void bubble_stop_when_noexchange( int *data, int length )
 {
@@ -66,6 +66,27 @@ void bubble_stop_when_noexchange( int *data, int length )
             }
         }
         i = pos;
+    }
+}
+```
+* 每次循环的时候，如果找出最大值和最小值，将会大大的提升性能。
+```
+void bubble_low_high( int *data, int length )
+{
+    int low = 0;
+    int high = length-1;
+    while (low < high)
+    {
+        for (int j = low; j < high; j++)
+        {
+            if (data[j] > data[j+1]) swap( data, j, j+1 );
+        }
+        high--;
+        for (int k = high; k > 0; k--)
+        {
+            if (data[k] < data[k-1]) swap( data, k, k-1 );
+        }
+        low++;
     }
 }
 ```
