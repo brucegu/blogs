@@ -30,3 +30,5 @@ public interface NetFrameworkAPI: StardardAPI
 }
 ```
 在创建应用程序或者类库的时候，考虑一下他的应用环境，选择不同的.NET Stardard实现即可。
+今天infoq上正好有一篇介绍.net core 和 .net standard的文章：
+http://www.infoq.com/cn/news/2017/10/dotnet-core-standard-difference
