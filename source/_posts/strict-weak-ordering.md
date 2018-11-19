@@ -19,6 +19,7 @@ strict weak ordering是集合S上的二元关系R，这个集合是一个strict 
 - 传递性：对所有S中的x，y，z，如果xRy， yRz，那么 xRz；
 - 不可比的传递性：对于所有S中的x，y，z，如果x和y不可比( !(xRy)&&!(yRx) )，并且y和z也不可以比，那么x和z也不可比。
 
+# std::map中，strict weak ordering具体实现
 map::key_compare默认使用less<T>，它的实现为a < b；也就是说map中默认使用“小于号”来实现，我们只需要重载自定义对象的“小于号”操作符即可，或者提供一个key_compare对象。下面是一个key_compare对象的例子：
 ```c
 struct S
